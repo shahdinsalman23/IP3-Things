@@ -1,0 +1,1118 @@
+/* Imports */
+/* Icons */
+@import url("https://use.fontawesome.com/releases/v5.14.0/css/all.css");
+@import url("https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css");
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp");
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0as,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+@font-face {
+  font-family: MyriadPro;
+  src: url(../fonts/MyriadPro-Regular.ttf);
+}
+@font-face {
+  font-family: SFUiDisplay;
+  src: url(../fonts/SFUIDisplay-Medium.ttf);
+}
+/* General Styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  list-style-type: none;
+  font-family: "Poppins", sans-serif;
+}
+::selection {
+  color: #fff;
+  background: black;
+}
+a {
+  display: inline-block;
+  color: #000;
+  transition: all 300ms ease-in-out;
+}
+a:hover,
+a.active {
+  color: var(--color-primary);
+}
+i[class^="bx"] {
+  vertical-align: middle;
+}
+ul,
+address {
+  margin-bottom: 0;
+}
+.imgFluid {
+  max-width: 100%;
+}
+.primary-color {
+  color: var(--color-primary);
+}
+.section-content .subHeading {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.section-content .heading {
+  font-size: 3.25rem;
+  line-height: 1.1;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.section-content p {
+  color: #666;
+  line-height: 2;
+}
+.section-content span {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.themebtn {
+  background: rgb(57, 167, 68);
+  color: white;
+  padding: 15px 40px;
+  border: 1px solid rgb(57, 167, 68);
+  transition: all 0.6s ease;
+  font-size: 16px;
+  font-family: 'Montserrat';
+}
+
+.themebtn:hover {
+  background: transparent;
+  color: rgb(57, 167, 68);
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/******** Header Section Start ********/
+.header-main {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  padding: 30px 0px 30px 0px;
+}
+
+.header-main .container {
+  max-width: 1140px;
+}
+
+.header-logo {
+  display: flex;
+}
+
+.header-nav ul li a {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  transition: all 0.6s ease;
+  position: relative;
+  width: 100%;
+  padding: 0px 5px;
+}
+
+.header-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-nav ul li a:focus {
+  outline: none;
+}
+
+.header-logo img {
+  width: 180px;
+}
+
+.header-nav ul li a::before {
+  position: absolute;
+  content: "";
+  background: rgb(57, 167, 68);
+  height: 0px;
+  top: -30px;
+  width: 100%;
+  z-index: -1;
+  left: 0;
+  transition: all .6s ease;
+}
+
+.header-nav ul li a:hover:before {
+  height: 80px;
+}
+
+
+/******** Header Section End ********/
+
+/******** First Banner Section Start ********/
+
+.firstbanner-bgimg {
+  position: relative;
+}
+
+.first-banner-sec .container {
+  max-width: 1350px;
+}
+
+.firstbanner-bgimg img {
+  width: 100%;
+}
+.first-banner-text {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+}
+
+.first-banner-text p {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 30px;
+}
+
+.first-banner-text a {
+  color: white;
+  border: 1px solid white;
+  padding: 15px 60px;
+  transition: all 0.6s ease;
+}
+
+.first-banner-text a:hover {
+  background: rgb(57, 167, 68);
+  border-color: rgb(57, 167, 68);
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.vertical-slider ul.slick-dots {
+  transform: rotate(90deg);
+  position: absolute;
+  top: 0px;
+  bottom: 30px;
+  right: 65%;
+}
+
+.vertical-slider .slick-dots  button:before {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 20px;
+    z-index: 999;
+}
+.vertical-slider .slick-dots  button{
+  background: white;
+  border-radius: 20px;
+  height: 10px;
+  width: 10px;
+  z-index: 999;
+}
+
+
+.vertical-slider .slick-dots li.slick-active button:before {
+    position: absolute;
+    background: rgb(57, 167, 68);
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+}
+.slick-dots li button:hover, .slick-dots li button:focus{
+  outline: none;
+}
+.vertical-slider .slick-track {
+  position: relative;
+  top: -1px;
+}
+
+/******** First Banner Section End ********/
+
+/******** About Us Section Start ********/
+
+.about-us-sec {
+  padding: 100px 0px 50px 0px;
+}
+
+.about-us-txt img {
+  position: absolute;
+  top: -20px;
+  width: 120px;
+  left: -180px;
+  animation: mymove 2s ease 0.5s infinite;
+}
+
+.about-us-sec .container {
+  max-width: 1100px;
+}
+
+.about-us-txt h6 {
+  color: black;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Montserrat";
+}
+
+.about-us-txt h6 span {
+  text-transform: lowercase;
+  font-size: 40px;
+  position: relative;
+  padding: 0px 0px 0px 5px;
+}
+
+.about-us-txt h6 span::before {
+  position: absolute;
+  content: "";
+  background: rgb(57, 167, 68);
+  width: 80px;
+  height: 75px;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+}
+
+.about-us-txt h6 span::after {
+  position: absolute;
+  content: "3";
+  color: white;
+  font-size: 48px;
+  bottom: 0;
+  font-family: "Montserrat";
+}
+
+.about-us-txt h4 {
+  font-size: 60px;
+  font-weight: 700;
+  font-family: "Montserrat";
+  color: black;
+  text-transform: uppercase;
+}
+
+.about-us-txt {
+  padding: 0px 52px 0px 0px;
+  position: relative;
+}
+
+.about-us-txt p {
+  font-family: "SFUIDisplay";
+  font-size: 16px;
+  color: black;
+}
+
+p.p-clr {
+  margin: 0px 0px 40px 0px;
+}
+
+.about-img {
+  margin: 40px 0px 0px 0px;
+  position: relative;
+}
+
+.about-img::before {
+  position: absolute;
+  content: "";
+  background: rgb(57, 167, 68);
+  width: 340px;
+  height: 380px;
+  left: -23px;
+  z-index: -1;
+  top: -26px;
+}
+
+.about-img::after {
+  position: absolute;
+  content: "";
+  background: rgb(57, 167, 68);
+  height: 160px;
+  width: 260px;
+  top: -26px;
+  right: 92px;
+  z-index: -1;
+}
+
+.about-img img {
+  width: 320px;
+  background: white;
+  box-shadow: 0px 2px 78.3px 11.7px rgba(0, 0, 0, 0.31);
+  padding: 50px 25px;
+}
+
+/******** About Us Section End ********/
+
+/******** Sim Card Section Start ********/
+
+.sim-card-sec {
+  padding: 50px 0px;
+}
+
+.sim-card-img {
+  text-align: center;
+}
+
+.sim-card-img img {
+  width: 350px;
+}
+
+.sim-card-img {
+  position: relative;
+}
+
+.sim-card-img::before {
+  position: absolute;
+  content: "";
+  background: rgb(57, 167, 68);
+  width: 450px;
+  height: 1px;
+  left: 0px;
+  top: 50%;
+}
+
+.sim-card-img::after {
+  position: absolute;
+  content: "";
+  background: rgb(57, 167, 68);
+  height: 1px;
+  width: 450px;
+  top: 50%;
+  right: 0;
+}
+
+/******** Sim Card Section End ********/
+
+/********* What Web Do Section Start ********/
+
+.what-we-do {
+  background: url(../images/what-we-do-banner.png);
+  height: 100%;
+  width: 100%;
+  padding: 60px 0px;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.what-we-txt {
+  text-align: center;
+  padding: 0px 0px 40px 0px;
+}
+
+.what-we-txt h4 {
+  font-family: "Montserrat";
+  font-size: 40px;
+  font-weight: 700;
+  color: black;
+}
+
+.what-we-txt h4 span {
+  color: rgb(57, 167, 68);
+}
+
+.what-we-txt p {
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: 'Montserrat';
+  padding: 0px 0px 41px 0px;
+}
+
+.what-we-txt p span {
+  color: rgb(57, 167, 68);
+}
+
+.service-card {
+  text-align: center;
+  background: white;
+  padding: 50px 20px 50px 20px;
+  box-shadow: 0px 2px 11px 4.55px rgba(0, 0, 0, 0.13);
+  height: 400px;
+  position: relative;
+}
+
+.service-slider .slick-track {
+  height: 470px;
+  padding: 0px 0px;
+}
+
+.service-slider .slick-slide {
+  margin: 0;
+}
+
+.service-slider button.slick-prev.slick-arrow {
+  background: transparent;
+  color: #000;
+  left: 0;
+  top: 35%;
+}
+
+.service-slider button.slick-prev.slick-arrow::before {
+  position: absolute;
+  content: "\ea64";
+  color: #000;
+  font-family: remixicon;
+  font-size: 60px;
+  font-weight: 200;
+  left: -60px;
+  top: 0;
+}
+
+.service-slider button.slick-next.slick-arrow {
+  background: transparent;
+  color: black;
+  top: 35%;
+  right: -10px;
+}
+
+.service-slider button.slick-next.slick-arrow::before {
+  position: absolute;
+  content: "\ea6e";
+  color: #000;
+  font-family: 'remixicon';
+  font-size: 60px;
+  font-weight: 200;
+  right: -50px;
+  top: 0;
+}
+
+.service-card img {
+  padding: 0px 0px 20px 0px;
+  position: relative;
+  transition: all 0.3s ease;
+  width: 80px;
+  margin: 0 auto;
+}
+
+.service-card h4 {
+  margin: 0;
+  padding: 10px 0px 20px 0px;
+  color: black;
+  font-weight: 700;
+  font-family: "Montserrat";
+  font-size: 23px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.service-card h4::before {
+  position: absolute;
+  content: "";
+  background: rgb(57, 167, 68);
+  height: 1px;
+  width: 110px;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 0px;
+}
+
+.service-card p {
+  padding: 20px 30px 0px 30px;
+  margin: 0;
+  font-family: "MyriadPro";
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.service-card::before {
+  position: absolute;
+  content: "";
+  background: rgb(57, 167, 68);
+  height: 5px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: all 0.6s ease;
+}
+
+.service-card:hover:before {
+  height: 100%;
+}
+
+.service-card:hover img {
+  filter: invert(1);
+}
+
+.service-card:hover h4 {
+  color: white;
+}
+
+.service-card:hover p {
+  color: white;
+}
+
+/********* What Web Do Section End ********/
+
+/******** Simplify Save Section Start ********/
+
+.simplify-save-sec {
+  padding: 80px 0px 50px 0px;
+  text-align: center;
+}
+
+.simplify-save-txt h2 {
+  font-size: 60px;
+  font-weight: 700;
+  color: black;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  margin: 0px 0px 20px 0px;
+}
+
+.simplify-save-txt h2 span {
+  position: relative;
+  z-index: 999;
+  color: white;
+  padding: 0px 6px;
+}
+
+.simplify-save-txt h2 span::before {
+  position: absolute;
+  content: "";
+  background: rgb(57, 167, 68);
+  width: 100%;
+  height: 140px;
+  bottom: 0;
+  z-index: -1;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.simplify-save-txt h6 {
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Montserrat";
+}
+
+.simplify-save-txt p {
+  font-family: "SFUIDisplay";
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0px 0px 40px 0px;
+}
+
+/******** Simplify Save Section End ********/
+
+/******** Testimonials Section Start ********/
+
+.our-client-say {
+  padding: 50px 0px;
+}
+
+.our-client-txt h6 {
+  color: black;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.our-client-txt {
+  text-align: center;
+}
+
+.our-client-txt h4 {
+  font-size: 60px;
+  text-transform: uppercase;
+  color: black;
+  font-family: "Montserrat";
+  font-weight: 800;
+}
+
+.our-client-txt p {
+  font-size: 16px;
+  color: black;
+  font-family: "SFUIDisplay";
+  font-weight: 500;
+  padding: 0px 0px 30px 0px;
+}
+
+.testimonial-box {
+  padding: 30px;
+  background: rgb(247, 247, 247);
+  margin: 0px 0px 10px 0px;
+}
+
+.testimonial-box span {
+  background: rgb(57, 167, 68);
+  padding: 8px 15px;
+  color: white;
+  font-size: 28px;
+}
+
+.testimonial-box p {
+  padding: 30px 0px 10px 0px;
+  color: darkgray;
+  font-family: "SFUIDisplay";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.client-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.client-name p {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: black;
+  font-family: "SFUIDisplay";
+  font-weight: 500;
+}
+
+.client-name h5 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  margin: 0;
+  font-size: 18px;
+}
+
+/******** Testimonials Section End ********/
+
+/******** Footer Section Start ********/
+
+.footer-main {
+  margin: 50px 0px 0px 0px;
+  padding: 50px 0px;
+  background: #1c1c1c;
+}
+
+.footer-about h4 {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 24px;
+}
+
+.footer-about p {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 16px;
+}
+
+.footer-about ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-about ul li a {
+  color: white;
+  font-size: 22px;
+}
+
+.footer-about ul li a:hover {
+  color: rgb(57, 167, 68);
+}
+
+.footer-links h4 {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 22px;
+  padding: 0px 0px 20px 0px;
+}
+
+.footer-links ul li a {
+  color: white;
+  font-family: "Montserrat";
+  padding: 0px 0px 6px 0px;
+  font-size: 16px;
+  transition: all 0.6s ease;
+}
+
+.footer-links ul li a i {
+  padding: 0px 5px 0px 0px;
+  color: rgb(57, 167, 68);
+  font-size: 21px;
+}
+
+.footer-links {
+  padding: 0px 0px 0px 50px;
+  position: relative;
+}
+
+.footer-links::before {
+  position: absolute;
+  content: "";
+  background: white;
+  height: 230px;
+  width: 1px;
+  left: 0;
+}
+
+.footer-copyright {
+  margin: 30px 0px 0px 0px;
+  border: 1px solid white;
+  text-align: center;
+  padding: 15px 0px;
+  border-radius: 10px;
+}
+
+.footer-copyright p {
+  margin: 0;
+  color: white;
+  font-family: "Montserrat";
+}
+
+.footer-links ul li a:hover {
+  color: rgb(57, 167, 68);
+}
+
+/******** Footer Section End ********/
+
+/******** Features Products Section Start ********/
+
+.features-sec {
+  padding: 50px 0px 100px 0px;
+}
+
+section.features-sec h3 {
+  text-align: center;
+  font-size: 50px;
+  color: black;
+  font-family: "Montserrat";
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0px 0px 40px 0px;
+}
+
+.product-img {
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .6s ease;
+  position: relative;
+}
+
+.feature-product h6 {
+  font-family: "Montserrat";
+  text-align: center;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 40px 0px 0px 0px;
+}
+
+.feature-product h4 {
+  font-family: "Montserrat";
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: black;
+}
+
+.feature-product span {
+  display: block;
+  text-align: center;
+  margin: 10px 0px;
+  color: black;
+  font-size: 20px;
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+
+.feature-product {
+  text-align: center;
+  transition: all .6s ease;
+}
+
+
+.feature-product:hover .product-img {
+    box-shadow: 0px 4px 39.6px 0.4px rgba(0, 0, 0, 0.25);
+}
+
+.product-img::before {
+  position: absolute;
+  content: "Quick VIew";
+  background: rgb(57, 167, 68);
+  width: 100%;
+  height: 34px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Montserrat';
+  bottom: -40px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .6s ease;
+}
+
+.product-img:hover:before {
+  visibility: visible;
+  opacity: 1;
+  bottom: 0px;
+}
+
+/******** Features Products Section End ********/
+
+
+/******** Connectivity for things Section Start ********/
+
+.connectivity-sec{
+  background: url(../images/connectivity-back-img.png);
+  height: 560px;
+  width: 100%;
+  padding: 30px 0px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.connectivity-txt {
+  padding: 50px 0px;
+}
+
+.connectivity-txt h3 {
+  font-size: 65px;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  line-height: 83px;
+}
+
+.connectivity-txt h3 span {
+  color: #2f7e38;
+  background: white;
+}
+
+.connectivity-txt p {
+  color: white;
+  padding: 0px 30px 0px 0px;
+  font-size: 18px;
+  font-family: 'MyriadPro';
+  font-weight: 500;
+}
+
+.connectivity-txt a {
+  padding: 15px 40px;
+  background: white;
+  font-size: 16px;
+  border: 1px solid white;
+}
+
+.connectivity-txt a:hover {
+  color: white;
+  background: transparent;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.Company-logos-sec {
+  background: #0a0a0a;
+  margin: 0px 0px -59px 0px;
+  padding: 12px 0px 20px 0px;
+  height: 95px;
+  position: relative;
+}
+
+.company-logo img {
+  width: 150px;
+  height: 83px;
+}
+
+.company-logo {
+  text-align: center;
+}
+
+/******** Connectivity for things Section End ********/
+
+
+
+/******** Ip3 Connectivity Section Start ********/
+
+.ip3-connectivity-sec {
+  padding: 150px 0px 80px 0px;
+  overflow: hidden;
+}
+
+.ip3-connectivity-img img {
+  width: 100%;
+}
+
+.text-circle {
+  width: 114px;
+  height: 114px;
+  border-radius: 50%;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  right: 190px;
+  cursor: pointer;
+}
+
+.asset-management {
+  right: 2px;
+  top: 102px;
+}
+
+.ip3-txt-box {
+  background: white;
+  width: 200px;
+  padding: 20px;
+  position: absolute;
+  z-index: 999;
+  bottom: 50px;
+  left: 80px;
+  /* display: none; */
+  box-shadow: 0px 2px 30.45px 4.55px rgba(0, 0, 0, 0.13);
+}
+.ip3-txt-box button {
+  background: rgb(57, 167, 68);
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px 12px;
+  font-size: 18px;
+  color: white;
+  z-index: 99999;
+  cursor: pointer;
+}
+
+.ip3-txt-box button:focus {
+  outline: none;
+}
+
+.ip3-txt-box h5 {
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+
+.ip3-txt-box p {
+  font-size: 13px;
+  font-family: 'SFUiDisplay';
+}
+
+.ip3-txt-box a {
+  font-size: 16px;
+  font-family: 'SFUiDisplay';
+}
+
+.supply-chain {
+  right: 3px;
+  top: 62%;
+}
+
+.scada-management {
+  top: 77.5%;
+}
+.fleed-management {
+  left: 2px;
+  top: 102px;
+}
+
+.gold-management {
+    left: 2px;
+    top: 62%;
+}
+
+.ip3-connectivity-img {
+  position: relative;
+}
+
+.ip3-connectivity-txt h4 {
+  font-size: 55px;
+  font-family: "Montserrat";
+  color: rgb(6, 9, 9);
+  font-weight: bold;
+}
+
+.ip3-connectivity-txt {
+  padding: 50px 100px 0px 0px;
+  position: relative;
+}
+
+.ip3-connectivity-txt h6 {
+  font-weight: 700;
+  font-size: 22px;
+  font-family: 'Montserrat';
+  padding: 0px 0px 10px 0px;
+}
+
+.ip3-connectivity-txt p {
+  font-family: "SFUIDisplay";
+  font-size: 16px;
+}
+
+.ip3-connectivity-txt img {
+  position: absolute;
+  width: 370px;
+  right: -130px;
+  bottom: 20px;
+    animation: mymove 2s ease 0.5s infinite;
+}
+
+
+
+/******** Ip3 Connectivity Section End ********/
+
+
+
+
+
+
+
+/******* Animation Start *******/
+
+@keyframes mymove {
+  0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+  }
+
+  50% {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+  }
+
+  100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+  }
+}
+
+/******* Animation End *******/
+
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1250px;
+  }
+}
+.tippy-content {
+  background: transparent !important;
+}
+
+
+.tippy-box {
+  background: transparent;
+}
+
+
+span.tippy-close.closebutton {
+  color: white;
+  position: absolute;
+  right: -5px;
+  top: 10px;
+  background: #39a744;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.tooltip-content.ip3-txt-box {
+  color: black;
+}
